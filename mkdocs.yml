@@ -1,0 +1,16 @@
+site_name: Flandre.Docs
+
+nav:
+  - 首页: index.md
+  - 起步:
+    - 创建你的第一个 Bot: start/create-first-bot.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html

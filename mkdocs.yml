@@ -4,6 +4,10 @@ nav:
   - 首页: index.md
   - 起步:
     - 创建你的第一个 Bot: start/create-first-bot.md
+    - 基本概念: start/basic-concepts.md
+  - "API 参考":
+    - "API 概述": api/index.md
+    - Bot: api/core/bot.md
 
 theme:
   name: material

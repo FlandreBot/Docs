@@ -1,30 +1,39 @@
 import { DefaultTheme } from 'vitepress'
+import { makeLink } from './utils'
 
 const sidebar: DefaultTheme.Sidebar = {
-  '/start/': [
+  '/guide/': [
+    makeLink('概述', '/guide/'),
     {
-      text: '起步',
+      text: '快速上手',
       items: [
-        { text: '创建你的第一个 Bot', link: '/start/create-first-bot.md' },
-        { text: '基本概念', link: '/start/basic-concepts.md' },
+        makeLink('从模板创建项目', '/guide/start/setup.md')
       ],
     },
+    {
+      text: '基础交互',
+      items: [
+        makeLink('事件 (Event)', '/guide/basic/event.md'),
+        makeLink('中间件 (Middleware)', '/guide/basic/middleware.md'),
+      ],
+    },
+    {
+      text: '指令系统',
+      items: [
+        makeLink('认识指令', '/guide/command/basic.md'),
+      ],
+    }
   ],
-  '/api/': [
+  '/ecosystem/': [
+    makeLink('概述', '/ecosystem/'),
     {
-      text: 'Flandre.Core API',
+      text: '适配器',
       items: [
-        { text: '机器人 (Bot)', link: '/api/core/bot.md' },
+        makeLink('OneBot 适配器', '/ecosystem/adapters/onebot.md'),
+        makeLink('Konata 适配器', '/ecosystem/adapters/konata.md'),
       ],
     },
-    {
-      text: 'Flandre.Framework API',
-      items: [
-        { text: '应用建造 (FlandreAppBuilder)', link: '/api/fx/appbuilder.md' },
-        { text: '应用 (FlandreApp)', link: '/api/fx/app.md' },
-      ],
-    },
-  ],
+  ]
 }
 
 export default sidebar

@@ -1,6 +1,6 @@
 import { DefaultTheme, defineConfigWithTheme } from 'vitepress'
 
-import nav from './navbar'
+import nav from './nav'
 import sidebar from './sidebar'
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
@@ -11,8 +11,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   base: '/',
   lastUpdated: true,
   markdown: {
-    theme: 'one-dark-pro',
-    lineNumbers: true,
+    theme: {
+      light: "github-light",
+      dark: "github-dark"
+    }
   },
 
   themeConfig: {
@@ -21,7 +23,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     sidebar,
     footer: {
       message: '所有文档均采用 CC-BY-NC-SA 4.0 许可协议',
-      copyright: 'Copyright © 2022-Present FlandreDevs',
+      copyright: 'Copyright © 2022-2023 FlandreDevs',
     },
   },
 })

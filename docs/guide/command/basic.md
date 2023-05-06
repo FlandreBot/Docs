@@ -14,7 +14,7 @@ public class ExamplePlugin : Plugin
     }
 }
 
-builder.AddPlugin<ExamplePlugin>();
+builder.Plugins.Add<ExamplePlugin>();
 ```
 
 Flandre 会自动解析指令方法的参数列表，在用户调用指令时，便会在解析成功后，将解析结果自动作为实参传入该方法。

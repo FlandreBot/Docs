@@ -24,7 +24,7 @@ dotnet new flandre -o MyFirstFlandreApp
 // 安装一个适配器，并添加在这里。
 var config = new YourAdapterConfig();
 // ...
-builder.AddAdapter(new YourAdapter(config));
+builder.Adapters.Add(new YourAdapter(config));
 ```
 
 接下来，你将了解到和 Flandre 进行基础交互的知识。

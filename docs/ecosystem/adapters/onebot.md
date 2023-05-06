@@ -62,7 +62,7 @@ config.Bots.Add(new OneBotBotConfig
     Endpoint = "ws://127.0.0.1:8080" // 配置的 WebSocket 监听地址
 });
 
-builder.AddAdapter(new OneBotAdapter(config));
+builder.Adapters.Add(new OneBotAdapter(config));
 ```
 
 如果你更倾向于使用独立的配置文件，你也可以这样做：
@@ -84,9 +84,24 @@ builder.AddAdapter(new OneBotAdapter(config));
 ```
 
 ```csharp
-builder.AddAdapter(new OneBotAdapter(
+builder.Adapters.Add(new OneBotAdapter(
     builder.Configuration
         .GetSection("Adapters:OneBot")
         .Get<OneBotAdapterConfig>()
     ?? new OneBotAdapterConfig()));
+```
+
+## 扩展方法
+
+我们也提供了几个扩展方法，稍微简化了一些：
+
+首先安装 `Flandre.Adapters.OneBot.Extensions` NuGet 包，然后：
+
+```csharp
+// 从 Configuration 中的 Adapters:OneBot 读取配置项
+builder.Adapters.AddOneBot();
+
+builder.Adapters.AddOneBot(IConfiguration configuration);
+
+builder.Adapters.AddOneBot(config => config.Xxx = /* ... */);
 ```

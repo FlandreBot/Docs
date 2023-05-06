@@ -1,17 +1,17 @@
 {
   "name": "flandre-docs",
   "version": "1.0.0",
-  "description": "Documentation for the Flandre project",
+  "description": "Documentation for Project Flandre.",
   "repository": "https://github.com/FlandreDevs/Docs.git",
-  "author": "b1acksoil <dev@sorabs.cc>",
+  "author": "bsdayo <dev@sorabs.cc>",
   "private": true,
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "dev": "vitepress dev docs --host",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.49",
+    "vitepress": "1.0.0-alpha.75",
     "vue": "^3.2.47"
   }
 }
